@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import UnivLogo from './UnivLogo';
+import UnivLogo from '../UnivLogo';
 
 const symbolToUniv = {
   SKKU: '성균관대학교',
