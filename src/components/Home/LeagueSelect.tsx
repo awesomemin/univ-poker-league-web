@@ -1,18 +1,10 @@
 import { useState } from 'react';
 import UnivLogo from '../UnivLogo';
-
-const symbolToUniv = {
-  SKKU: '성균관대학교',
-  SNU: '서울대학교',
-  YU: '연세대학교',
-  KU: '고려대학교',
-  HYU: '한양대학교',
-};
-
-type UnivKey = keyof typeof symbolToUniv; // 'SKKU' | 'HYU' | 'KU' | 'SNU' | 'YU'
+import { convertSymbolToName } from '../../utils/utils';
+import { LeagueSymbol } from '../../types/league';
 
 function LeagueSelect() {
-  const [selectedLeague, setSelectedLeague] = useState<UnivKey>('SKKU');
+  const [selectedLeague, setSelectedLeague] = useState<LeagueSymbol>('SKKU');
   return (
     <>
       <div className="my-5 flex gap-5 justify-center">
@@ -37,7 +29,7 @@ function LeagueSelect() {
         </div>
       </div>
       <p className="my-5 font-semibold text-xl text-center">
-        {symbolToUniv[selectedLeague]} 리그
+        {convertSymbolToName(selectedLeague)} 리그
       </p>
     </>
   );

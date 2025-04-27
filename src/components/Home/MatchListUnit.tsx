@@ -1,5 +1,6 @@
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import MatchStatusIndicator from './MatchStatusIndicator';
+import { Link } from 'react-router';
 
 interface MatchListUnitProps {
   datetime: string;
@@ -7,6 +8,7 @@ interface MatchListUnitProps {
   minimumParticipants: number;
   maximumParticipants: number;
   currentParticipants: number;
+  matchId: number;
 }
 
 function MatchListUnit({
@@ -15,10 +17,14 @@ function MatchListUnit({
   minimumParticipants,
   maximumParticipants,
   currentParticipants,
+  matchId,
 }: MatchListUnitProps) {
   return (
     <>
-      <div className="flex flex-col relative border-b border-[#DDDDDD]">
+      <Link
+        className="flex flex-col relative border-b border-[#DDDDDD]"
+        to={`/match/${matchId}`}
+      >
         <p className="text-sm mt-3 ml-3">{datetime}</p>
         <p className="text-xs ml-5 mt-2 text-[#777777]">{place}</p>
         <p className="text-xs ml-5 mt-1 mb-3 text-[#777777]">
@@ -29,7 +35,7 @@ function MatchListUnit({
           <PeopleAltIcon />
         </div>
         <MatchStatusIndicator status="마감" />
-      </div>
+      </Link>
     </>
   );
 }

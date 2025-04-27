@@ -2,12 +2,18 @@
 
 @font-face {
   font-family: 'Pretendard';
-  src: url('./assets/fonts/PretendardVariable.woff2') format('woff2'),
+  src: url('./assets/fonts/PretendardVariable.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'Impact';
-  src: url('./assets/fonts/Impact.ttf') format('ttf'),
+  src: url('./assets/fonts/Impact.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('./assets/fonts/GreatVibes.ttf') format('ttf');
+  font-weight: 400;
 }
 
 body {

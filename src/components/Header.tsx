@@ -9,7 +9,9 @@ function Header() {
         <Link to="/sidebar">
           <MenuIcon />
         </Link>
-        <span className="font-[Impact] text-2xl">UPL</span>
+        <Link className="font-[Impact] text-2xl" to="/">
+          UPL
+        </Link>
         <PersonIcon />
       </div>
     </>
